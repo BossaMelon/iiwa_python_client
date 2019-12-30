@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+
+
+option java_multiple_files = true;
+
+option java_package = "io.grpc.iiwaService";
+
+
+
+
+service iiwaService {
+  rpc askHome (python_request) returns (robot_reply) {}
+  rpc askCartesianPosition (python_request) returns (robot_cartesian_position_reply) {}
+  rpc askJointPosition (python_request) returns (robot_joint_position_reply) {}
+  rpc move (python_cartesian_position_request) returns (robot_reply) {}
+}
+
+
+message robot_reply{
+  bool success = 1;
+}
+message python_request{}
+
+message robot_cartesian_position_reply{
+  double X = 1;
+  double Y = 2;
+  double Z = 3;
+  double A = 4;
+  double B = 5;
+  double C = 6;
+}
+
+message robot_joint_position_reply{
+  double A1 = 1;
+  double A2 = 2;
+  double A3 = 3;
+  double A4 = 4;
+  double A5 = 5;
+  double A6 = 6;
+  double A7 = 7;
+}
+
+message python_cartesian_position_request {
+  double X = 1;
+  double Y = 2;
+  double Z = 3;
+}
