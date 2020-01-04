@@ -14,11 +14,6 @@ class iiwaServiceStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.askHome = channel.unary_unary(
-        '/iiwaService/askHome',
-        request_serializer=grpc__iiwa__pb2.python_request.SerializeToString,
-        response_deserializer=grpc__iiwa__pb2.robot_reply.FromString,
-        )
     self.askCartesianPosition = channel.unary_unary(
         '/iiwaService/askCartesianPosition',
         request_serializer=grpc__iiwa__pb2.python_request.SerializeToString,
@@ -34,18 +29,26 @@ class iiwaServiceStub(object):
         request_serializer=grpc__iiwa__pb2.python_cartesian_position_request.SerializeToString,
         response_deserializer=grpc__iiwa__pb2.robot_reply.FromString,
         )
+    self.move_with_orientation = channel.unary_unary(
+        '/iiwaService/move_with_orientation',
+        request_serializer=grpc__iiwa__pb2.python_cartesian_pose_request.SerializeToString,
+        response_deserializer=grpc__iiwa__pb2.robot_reply.FromString,
+        )
+    self.auto_down = channel.unary_unary(
+        '/iiwaService/auto_down',
+        request_serializer=grpc__iiwa__pb2.force_condition.SerializeToString,
+        response_deserializer=grpc__iiwa__pb2.robot_reply.FromString,
+        )
+    self.hold_position = channel.unary_unary(
+        '/iiwaService/hold_position',
+        request_serializer=grpc__iiwa__pb2.python_cartesian_pose_request.SerializeToString,
+        response_deserializer=grpc__iiwa__pb2.robot_reply.FromString,
+        )
 
 
 class iiwaServiceServicer(object):
   # missing associated documentation comment in .proto file
   pass
-
-  def askHome(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
 
   def askCartesianPosition(self, request, context):
     # missing associated documentation comment in .proto file
@@ -68,14 +71,30 @@ class iiwaServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def move_with_orientation(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def auto_down(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def hold_position(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_iiwaServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'askHome': grpc.unary_unary_rpc_method_handler(
-          servicer.askHome,
-          request_deserializer=grpc__iiwa__pb2.python_request.FromString,
-          response_serializer=grpc__iiwa__pb2.robot_reply.SerializeToString,
-      ),
       'askCartesianPosition': grpc.unary_unary_rpc_method_handler(
           servicer.askCartesianPosition,
           request_deserializer=grpc__iiwa__pb2.python_request.FromString,
@@ -89,6 +108,21 @@ def add_iiwaServiceServicer_to_server(servicer, server):
       'move': grpc.unary_unary_rpc_method_handler(
           servicer.move,
           request_deserializer=grpc__iiwa__pb2.python_cartesian_position_request.FromString,
+          response_serializer=grpc__iiwa__pb2.robot_reply.SerializeToString,
+      ),
+      'move_with_orientation': grpc.unary_unary_rpc_method_handler(
+          servicer.move_with_orientation,
+          request_deserializer=grpc__iiwa__pb2.python_cartesian_pose_request.FromString,
+          response_serializer=grpc__iiwa__pb2.robot_reply.SerializeToString,
+      ),
+      'auto_down': grpc.unary_unary_rpc_method_handler(
+          servicer.auto_down,
+          request_deserializer=grpc__iiwa__pb2.force_condition.FromString,
+          response_serializer=grpc__iiwa__pb2.robot_reply.SerializeToString,
+      ),
+      'hold_position': grpc.unary_unary_rpc_method_handler(
+          servicer.hold_position,
+          request_deserializer=grpc__iiwa__pb2.python_cartesian_pose_request.FromString,
           response_serializer=grpc__iiwa__pb2.robot_reply.SerializeToString,
       ),
   }

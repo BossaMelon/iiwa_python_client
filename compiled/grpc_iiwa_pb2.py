@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=_b('\n\023io.grpc.iiwaServiceP\001'),
-  serialized_pb=_b('\n\x0fgrpc_iiwa.proto\"\x1e\n\x0brobot_reply\x12\x0f\n\x07success\x18\x01 \x01(\x08\"\x10\n\x0epython_request\"b\n\x1erobot_cartesian_position_reply\x12\t\n\x01X\x18\x01 \x01(\x01\x12\t\n\x01Y\x18\x02 \x01(\x01\x12\t\n\x01Z\x18\x03 \x01(\x01\x12\t\n\x01\x41\x18\x04 \x01(\x01\x12\t\n\x01\x42\x18\x05 \x01(\x01\x12\t\n\x01\x43\x18\x06 \x01(\x01\"p\n\x1arobot_joint_position_reply\x12\n\n\x02\x41\x31\x18\x01 \x01(\x01\x12\n\n\x02\x41\x32\x18\x02 \x01(\x01\x12\n\n\x02\x41\x33\x18\x03 \x01(\x01\x12\n\n\x02\x41\x34\x18\x04 \x01(\x01\x12\n\n\x02\x41\x35\x18\x05 \x01(\x01\x12\n\n\x02\x41\x36\x18\x06 \x01(\x01\x12\n\n\x02\x41\x37\x18\x07 \x01(\x01\"D\n!python_cartesian_position_request\x12\t\n\x01X\x18\x01 \x01(\x01\x12\t\n\x01Y\x18\x02 \x01(\x01\x12\t\n\x01Z\x18\x03 \x01(\x01\x32\x85\x02\n\x0biiwaService\x12*\n\x07\x61skHome\x12\x0f.python_request\x1a\x0c.robot_reply\"\x00\x12J\n\x14\x61skCartesianPosition\x12\x0f.python_request\x1a\x1f.robot_cartesian_position_reply\"\x00\x12\x42\n\x10\x61skJointPosition\x12\x0f.python_request\x1a\x1b.robot_joint_position_reply\"\x00\x12:\n\x04move\x12\".python_cartesian_position_request\x1a\x0c.robot_reply\"\x00\x42\x17\n\x13io.grpc.iiwaServiceP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x0fgrpc_iiwa.proto\"\x1e\n\x0brobot_reply\x12\x0f\n\x07success\x18\x01 \x01(\x08\"\x10\n\x0epython_request\"b\n\x1erobot_cartesian_position_reply\x12\t\n\x01X\x18\x01 \x01(\x01\x12\t\n\x01Y\x18\x02 \x01(\x01\x12\t\n\x01Z\x18\x03 \x01(\x01\x12\t\n\x01\x41\x18\x04 \x01(\x01\x12\t\n\x01\x42\x18\x05 \x01(\x01\x12\t\n\x01\x43\x18\x06 \x01(\x01\"p\n\x1arobot_joint_position_reply\x12\n\n\x02\x41\x31\x18\x01 \x01(\x01\x12\n\n\x02\x41\x32\x18\x02 \x01(\x01\x12\n\n\x02\x41\x33\x18\x03 \x01(\x01\x12\n\n\x02\x41\x34\x18\x04 \x01(\x01\x12\n\n\x02\x41\x35\x18\x05 \x01(\x01\x12\n\n\x02\x41\x36\x18\x06 \x01(\x01\x12\n\n\x02\x41\x37\x18\x07 \x01(\x01\"d\n!python_cartesian_position_request\x12\t\n\x01X\x18\x01 \x01(\x01\x12\t\n\x01Y\x18\x02 \x01(\x01\x12\t\n\x01Z\x18\x03 \x01(\x01\x12\x10\n\x08velocity\x18\x04 \x01(\x01\x12\x0c\n\x04mode\x18\x05 \x01(\x08\"\x81\x01\n\x1dpython_cartesian_pose_request\x12\t\n\x01X\x18\x01 \x01(\x01\x12\t\n\x01Y\x18\x02 \x01(\x01\x12\t\n\x01Z\x18\x03 \x01(\x01\x12\t\n\x01\x41\x18\x04 \x01(\x01\x12\t\n\x01\x42\x18\x05 \x01(\x01\x12\t\n\x01\x43\x18\x06 \x01(\x01\x12\x10\n\x08velocity\x18\x07 \x01(\x01\x12\x0c\n\x04mode\x18\x08 \x01(\x08\"F\n\x0f\x66orce_condition\x12\r\n\x05\x66orce\x18\x01 \x01(\x01\x12\x12\n\nz_distance\x18\x02 \x01(\x01\x12\x10\n\x08velocity\x18\x03 \x01(\x01\x32\x92\x03\n\x0biiwaService\x12J\n\x14\x61skCartesianPosition\x12\x0f.python_request\x1a\x1f.robot_cartesian_position_reply\"\x00\x12\x42\n\x10\x61skJointPosition\x12\x0f.python_request\x1a\x1b.robot_joint_position_reply\"\x00\x12:\n\x04move\x12\".python_cartesian_position_request\x1a\x0c.robot_reply\"\x00\x12G\n\x15move_with_orientation\x12\x1e.python_cartesian_pose_request\x1a\x0c.robot_reply\"\x00\x12-\n\tauto_down\x12\x10.force_condition\x1a\x0c.robot_reply\"\x00\x12?\n\rhold_position\x12\x1e.python_cartesian_pose_request\x1a\x0c.robot_reply\"\x00\x42\x17\n\x13io.grpc.iiwaServiceP\x01\x62\x06proto3')
 )
 
 
@@ -248,6 +248,20 @@ _PYTHON_CARTESIAN_POSITION_REQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='velocity', full_name='python_cartesian_position_request.velocity', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mode', full_name='python_cartesian_position_request.mode', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -261,7 +275,132 @@ _PYTHON_CARTESIAN_POSITION_REQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=283,
-  serialized_end=351,
+  serialized_end=383,
+)
+
+
+_PYTHON_CARTESIAN_POSE_REQUEST = _descriptor.Descriptor(
+  name='python_cartesian_pose_request',
+  full_name='python_cartesian_pose_request',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='X', full_name='python_cartesian_pose_request.X', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Y', full_name='python_cartesian_pose_request.Y', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Z', full_name='python_cartesian_pose_request.Z', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='A', full_name='python_cartesian_pose_request.A', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='B', full_name='python_cartesian_pose_request.B', index=4,
+      number=5, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='C', full_name='python_cartesian_pose_request.C', index=5,
+      number=6, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='velocity', full_name='python_cartesian_pose_request.velocity', index=6,
+      number=7, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='mode', full_name='python_cartesian_pose_request.mode', index=7,
+      number=8, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=386,
+  serialized_end=515,
+)
+
+
+_FORCE_CONDITION = _descriptor.Descriptor(
+  name='force_condition',
+  full_name='force_condition',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='force', full_name='force_condition.force', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z_distance', full_name='force_condition.z_distance', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='velocity', full_name='force_condition.velocity', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=517,
+  serialized_end=587,
 )
 
 DESCRIPTOR.message_types_by_name['robot_reply'] = _ROBOT_REPLY
@@ -269,6 +408,8 @@ DESCRIPTOR.message_types_by_name['python_request'] = _PYTHON_REQUEST
 DESCRIPTOR.message_types_by_name['robot_cartesian_position_reply'] = _ROBOT_CARTESIAN_POSITION_REPLY
 DESCRIPTOR.message_types_by_name['robot_joint_position_reply'] = _ROBOT_JOINT_POSITION_REPLY
 DESCRIPTOR.message_types_by_name['python_cartesian_position_request'] = _PYTHON_CARTESIAN_POSITION_REQUEST
+DESCRIPTOR.message_types_by_name['python_cartesian_pose_request'] = _PYTHON_CARTESIAN_POSE_REQUEST
+DESCRIPTOR.message_types_by_name['force_condition'] = _FORCE_CONDITION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 robot_reply = _reflection.GeneratedProtocolMessageType('robot_reply', (_message.Message,), {
@@ -306,6 +447,20 @@ python_cartesian_position_request = _reflection.GeneratedProtocolMessageType('py
   })
 _sym_db.RegisterMessage(python_cartesian_position_request)
 
+python_cartesian_pose_request = _reflection.GeneratedProtocolMessageType('python_cartesian_pose_request', (_message.Message,), {
+  'DESCRIPTOR' : _PYTHON_CARTESIAN_POSE_REQUEST,
+  '__module__' : 'grpc_iiwa_pb2'
+  # @@protoc_insertion_point(class_scope:python_cartesian_pose_request)
+  })
+_sym_db.RegisterMessage(python_cartesian_pose_request)
+
+force_condition = _reflection.GeneratedProtocolMessageType('force_condition', (_message.Message,), {
+  'DESCRIPTOR' : _FORCE_CONDITION,
+  '__module__' : 'grpc_iiwa_pb2'
+  # @@protoc_insertion_point(class_scope:force_condition)
+  })
+_sym_db.RegisterMessage(force_condition)
+
 
 DESCRIPTOR._options = None
 
@@ -315,22 +470,13 @@ _IIWASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=354,
-  serialized_end=615,
+  serialized_start=590,
+  serialized_end=992,
   methods=[
-  _descriptor.MethodDescriptor(
-    name='askHome',
-    full_name='iiwaService.askHome',
-    index=0,
-    containing_service=None,
-    input_type=_PYTHON_REQUEST,
-    output_type=_ROBOT_REPLY,
-    serialized_options=None,
-  ),
   _descriptor.MethodDescriptor(
     name='askCartesianPosition',
     full_name='iiwaService.askCartesianPosition',
-    index=1,
+    index=0,
     containing_service=None,
     input_type=_PYTHON_REQUEST,
     output_type=_ROBOT_CARTESIAN_POSITION_REPLY,
@@ -339,7 +485,7 @@ _IIWASERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='askJointPosition',
     full_name='iiwaService.askJointPosition',
-    index=2,
+    index=1,
     containing_service=None,
     input_type=_PYTHON_REQUEST,
     output_type=_ROBOT_JOINT_POSITION_REPLY,
@@ -348,9 +494,36 @@ _IIWASERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='move',
     full_name='iiwaService.move',
-    index=3,
+    index=2,
     containing_service=None,
     input_type=_PYTHON_CARTESIAN_POSITION_REQUEST,
+    output_type=_ROBOT_REPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='move_with_orientation',
+    full_name='iiwaService.move_with_orientation',
+    index=3,
+    containing_service=None,
+    input_type=_PYTHON_CARTESIAN_POSE_REQUEST,
+    output_type=_ROBOT_REPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='auto_down',
+    full_name='iiwaService.auto_down',
+    index=4,
+    containing_service=None,
+    input_type=_FORCE_CONDITION,
+    output_type=_ROBOT_REPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='hold_position',
+    full_name='iiwaService.hold_position',
+    index=5,
+    containing_service=None,
+    input_type=_PYTHON_CARTESIAN_POSE_REQUEST,
     output_type=_ROBOT_REPLY,
     serialized_options=None,
   ),
