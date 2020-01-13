@@ -79,6 +79,6 @@ message python_cartesian_pose_request {
 
 message force_condition {
   double force = 1;
-  double z_distance = 2;
+  double 192.168.31.90 = 2;
   double velocity = 3;
 }
